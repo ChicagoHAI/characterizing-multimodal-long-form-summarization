@@ -7,9 +7,9 @@ import anthropic
 from openai import OpenAI
 import cohere
 
-OPENAI_KEY = "api key"
-ANTHROPIC_KEY = "api key"
-COHERE_KEY = "api key"
+OPENAI_KEY = "YOUR API KEY"
+ANTHROPIC_KEY = "YOUR API KEY"
+COHERE_KEY = "YOUR API KEY"
 
 class LanguageModelAPI:
     def __init__(

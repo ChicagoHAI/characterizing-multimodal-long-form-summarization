@@ -45,19 +45,19 @@ encoding = {
 }
 
 length_dict = {
-        'gpt-3.5-turbo-1106': 16385,    # tl
-        'gpt-4-1106-preview': 128000,   # tl
-        'claude-2.0': 100000,           # tl
-        'claude-2.1': 200000,           # tl
-        'command': 10000                # wl
-        }
+    'gpt-3.5-turbo-1106': 16385,    # tl
+    'gpt-4-1106-preview': 128000,   # tl
+    'claude-2.0': 100000,           # tl
+    'claude-2.1': 200000,           # tl
+    'command': 10000                # wl
+    }
 
 prompt_dict = {
     2: PROMPT_NUM,
     3: PROMPT_TAB,
     4: PROMPT_NUM + PROMPT_TAB,
     5: PROMPT_CoT_zshot
-}
+    }
 
 
 def parse_args():
@@ -125,16 +125,13 @@ def summarize_10k_varlen(args,
     res_dict['item_7_tables'] = ''.join(tables)
 
     # Customize chat_input for different kinds of api
-    if args.prompt == 0 or args.prompt == 1:
+    if args.prompt == 0:
         if args.api == 'cohere':
             chat_input = report_truncated
         elif args.api == 'openai':
             chat_input = SIMPLE_PROMPT + report_truncated
         elif args.api == 'claude':
-            if args.prompt == 0:
-                chat_input = SIMPLE_PROMPT + report_truncated # propmt0
-            elif args.prompt == 1:
-                chat_input = CLAUDE_PROMPT0 + report_truncated + CLAUDE_PROMPT1 # prompt1
+            chat_input = CLAUDE_PROMPT0 + report_truncated + CLAUDE_PROMPT1
     else:
         chat_input = SIMPLE_PROMPT + report_truncated + '\n\n' + prompt_dict[args.prompt]
     
