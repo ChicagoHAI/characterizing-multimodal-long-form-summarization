@@ -1,7 +1,7 @@
 # Characterizing Multimodal Long-form Summarization: A Case Study on Financial Reports
 
 This repository contains code for the paper
-> **[Characterizing Multimodal Long-form Summarization: A Case Study on Financial Reports](https://arxiv.org/abs/2211.04486)**  
+> **[Characterizing Multimodal Long-form Summarization: A Case Study on Financial Reports](https://arxiv.org/abs/2404.06162)**  
 > Tianyu Cao, Natraj Raman, Danial Dervovic, Chenhao Tan 
 > Conference on Language Modeling (COLM), 2024.
 
